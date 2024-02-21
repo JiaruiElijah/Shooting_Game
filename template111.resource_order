@@ -5,6 +5,7 @@
     {"name":"obj_exit","order":14,"path":"objects/obj_exit/obj_exit.yy",},
     {"name":"obj_door","order":13,"path":"objects/obj_door/obj_door.yy",},
     {"name":"Object10","order":12,"path":"objects/Object10/Object10.yy",},
+    {"name":"Room4","order":1,"path":"rooms/Room4/Room4.yy",},
     {"name":"obj_newTextbox","order":16,"path":"objects/obj_newTextbox/obj_newTextbox.yy",},
     {"name":"obj_wall","order":9,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"obj_gameTitle","order":10,"path":"objects/obj_gameTitle/obj_gameTitle.yy",},

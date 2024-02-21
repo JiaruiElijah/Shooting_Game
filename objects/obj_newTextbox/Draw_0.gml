@@ -1,6 +1,10 @@
 // draw textbox
 
-draw_sprite(spr_Text, 0, x, y)
+//draw_sprite(spr_Text, 0, x, y)
+
+// 使用draw_sprite_ext来绘制并调整尺寸
+var scale = 0.7; // 缩放因子，小于1为缩小，大于1为放大
+draw_sprite_ext(spr_Text, 0, x, y, scale, scale, 0, c_white, 1);
 
 // draw text
 draw_set_halign(fa_left);
