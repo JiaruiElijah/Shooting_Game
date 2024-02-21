@@ -9,6 +9,7 @@ if(place_meeting(x, y, obj_player)){
 			myTextbox = instance_create_layer(x, y, "Text", obj_newTextbox);
 			myTextbox.text = myText;
 			myTextbox.creator = self;
+			myTextbox.name = myName;
 		}
 	}
 
