@@ -3,7 +3,7 @@ myTextbox = noone;
 myName = "Susan";
 textNumber = 0;
 
-myText[0] = "My name is Susan.HIIIIIIIIIIII, DJWIOQDO, DDAOAFNAJ"
+myText[0] = "My name is Susan.HIIIIIIIIIIII, DJWIOQDO, DDAOA"
 myText[1] = "Nice to meet you."
 
 myText2[0] = "You find my key."
