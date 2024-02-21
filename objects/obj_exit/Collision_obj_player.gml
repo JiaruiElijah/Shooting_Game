@@ -1,5 +1,5 @@
 
-    room_goto(Room3);
+    room_goto(Room4);
 	audio_play_sound(Sound1, 1, false); // end
 	
 	

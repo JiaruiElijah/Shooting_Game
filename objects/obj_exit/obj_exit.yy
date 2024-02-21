@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "leaf",
-    "path": "sprites/leaf/leaf.yy",
+    "name": "Sprite35",
+    "path": "sprites/Sprite35/Sprite35.yy",
   },
   "spriteMaskId": null,
   "visible": true,
