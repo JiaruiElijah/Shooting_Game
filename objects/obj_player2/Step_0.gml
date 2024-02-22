@@ -1,5 +1,5 @@
 // 设置速度
-var move_speed = 2;
+var move_speed = 5;
 
 
 if (global.canMove == true) {
@@ -57,7 +57,7 @@ if (global.endTime == 0) { // 如果计时器未停止
 
 cd --;
 
-if(cd <= 0 && mouse_check_button(mb_left)){
+if(cd <= 0 && mouse_check_button(mb_left) && state == PlayerState.Alive){
 	cd = cdValue;
 	audio_play_sound(aBullet, 1, false);
 	with(instance_create_layer(x, y, "bullets", obj_bullet)){
@@ -80,5 +80,44 @@ if (shake_duration > 0) {
     // 确保视图返回原位
     camera_set_view_pos(view_camera[0], view_xview[0], view_yview[0]);
 }
+
+
+if (currentHealth <= 0) {
+		state = PlayerState.Dead;
+	    sprite_index = player_death2; // 假设这是死亡动画精灵
+		//instance_destroy(obj_gun);
+		global.canMove = false;
+		//show_debug_message("Running")
+		if(keyboard_check(vk_space)){
+			alarm[0] = room_speed * 3; // room_speed是每秒的步数
+		}
+		
+	
+
+}
+
+if (currentHealth > 0){
+	show_debug_message("NONONO")
+
+}
+
+var numberOfEnemies = 15; // 举例，一次性生成5个敌人
+
+if (keyboard_check_pressed(vk_enter)) {
+    for (var i = 0; i < numberOfEnemies; i++) {
+        var enemyX = random_range(0, room_width); // 随机X位置
+        var enemyY = random_range(0, room_height); // 随机Y位置
+
+        // 在随机位置生成敌人
+        instance_create_layer(enemyX, enemyY, "Enemy", obj_enemy);
+    }
+}
+
+if (keyboard_check_pressed(vk_tab)) {
+    room_goto(Room2); 
+}
+
+
+
 
 

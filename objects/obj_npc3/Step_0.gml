@@ -5,12 +5,22 @@ image_xscale = -0.3;
 
 if(place_meeting(x, y, obj_player2)){
 	if(keyboard_check_pressed(vk_space)){
-		if(myTextbox == noone){
-			myTextbox = instance_create_layer(x, y, "Text", obj_newTextbox);
+		if(myTextbox == noone && global.enemyCount != 0){
+			myTextbox = instance_create_layer(x -150, y - 100, "Text", obj_newTextbox);
 			myTextbox.text = myText;
 			myTextbox.depth = -1000;
 			myTextbox.creator = self;
 			myTextbox.name = myName;
+		}
+		
+		if(myTextbox == noone && global.enemyCount == 0){
+			myTextbox = instance_create_layer(x -150, y - 100, "Text", obj_newTextbox);
+			myTextbox.text = myText2;
+			myTextbox.depth = -1000;
+			myTextbox.creator = self;
+			myTextbox.name = myName;
+		
+		
 		}
 	}
 

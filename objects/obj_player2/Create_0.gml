@@ -1,3 +1,13 @@
+enum PlayerState {
+    Alive,
+    Dead
+}
+
+
+// 在Create事件中初始化状态为Alive
+state = PlayerState.Alive;
+
+
 global.canMove = true;
 
 global.hasCollectedItem = false;

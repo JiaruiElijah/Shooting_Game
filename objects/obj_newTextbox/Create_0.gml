@@ -1,4 +1,4 @@
-text = "My name is Susan.HIIIIIIIIIIII, DJWIOQDO, DDAOAFNAJ"
+text = "My name is Susan. Nice to meet you"
 page = 0;
 charCount = 0; //自动换行计数器
 
