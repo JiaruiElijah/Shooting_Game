@@ -1,6 +1,13 @@
 if(dead){
 	sprite_index = enemydead;
 	speed = 0;
+
+	global.enemyCount -= 1;
+
+	if (global.enemyCount <= 0) {
+		
+	}
+
 }
 
 else{

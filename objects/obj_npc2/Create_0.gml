@@ -3,7 +3,7 @@
 depth = -y;
 myTextbox = noone;
 myName = "Susan";
-myText[0] = "Using mouse for shooting"
-myText[1] = "Pree Enter when you are ready"
+myText[0] = "Hello, I'm Susan."
+myText[1] = "Enter the gate and start the training."
 
 
