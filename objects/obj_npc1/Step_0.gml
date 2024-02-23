@@ -39,6 +39,6 @@ else{
 
 }
 
-//if (keyboard_check_pressed(vk_space)) { // 比如检测到玩家与NPC的距离足够近
+//if (keyboard_check_pressed(vk_space)) { // 检测到玩家与NPC的距离足够近
     //startDialogue("Example");
 //}

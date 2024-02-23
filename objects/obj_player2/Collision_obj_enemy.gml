@@ -3,7 +3,7 @@ if(!other.dead && state == PlayerState.Alive){
 	// 触发震动
 	shake_duration = 10; // 震动持续的步数
 	shake_intensity = 5; // 震动的强度
-	// 假设这段代码在处理玩家被敌人攻击的逻辑中
+
 	apply_damage(obj_player2, 10); // 玩家受到10点伤害
 
 

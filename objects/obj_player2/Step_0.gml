@@ -84,12 +84,12 @@ if (shake_duration > 0) {
 
 if (currentHealth <= 0) {
 		state = PlayerState.Dead;
-	    sprite_index = player_death2; // 假设这是死亡动画精灵
+	    sprite_index = player_death2; 
 		//instance_destroy(obj_gun);
 		global.canMove = false;
 		//show_debug_message("Running")
 		if(keyboard_check(vk_space)){
-			alarm[0] = room_speed * 3; // room_speed是每秒的步数
+			alarm[0] = room_speed * 3; 
 		}
 		
 	
@@ -101,7 +101,7 @@ if (currentHealth > 0){
 
 }
 
-var numberOfEnemies = 15; // 举例，一次性生成5个敌人
+var numberOfEnemies = 15; 
 
 if (keyboard_check_pressed(vk_enter)) {
     for (var i = 0; i < numberOfEnemies; i++) {
