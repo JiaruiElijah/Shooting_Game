@@ -9,7 +9,9 @@ state = PlayerState.Alive;
 
 
 global.canMove = true;
-
+// could let camera or other obj to get player's position
+global.player_x = x;
+global.player_y = y;
 global.hasCollectedItem = false;
 
 // initialize timmer
@@ -17,11 +19,15 @@ global.startTime = current_time; // 记录游戏开始的时间
 global.endTime = 0; // 初始化结束时间
 global.elapsedTime = 0; // 初始化流逝的时间
 
-cdValue = 10;
-cd = 0;
+//cdValue = 10;
+//cd = 0;
+
+
 
 shake_duration = 0;
 shake_intensity = 0;
+knockback_speed = 0;
+knockback_direction = 0;
 
 //health system
 maxHealth = 100; // 玩家的最大血量

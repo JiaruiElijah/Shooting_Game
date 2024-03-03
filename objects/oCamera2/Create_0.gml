@@ -5,3 +5,5 @@ follow =  obj_player2;
 
 xTo = x;
 yTo = y;
+
+//function sleeep
