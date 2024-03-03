@@ -94,6 +94,7 @@ if (knockback_speed > 0) {
 if place_meeting(x,y,obj_bullet) {
 	gothit = true
 	sprite_index = enemydead;
+
 	alarm[1] = 20	
 }
 

@@ -96,33 +96,6 @@ if (global.endTime == 0) { // 如果计时器未停止
 }
 
 
-//cd --;
-
-//if(cd <= 0 && mouse_check_button(mb_left) && state == PlayerState.Alive){
-	//cd = cdValue;
-	//audio_play_sound(aBullet, 1, false);
-	//with(instance_create_layer(x, y, "bullets", obj_bullet)){
-		//direction = obj_gun.image_angle;
-		//speed = 8;
-	
-	
-	//}
-
-
-//}
-
-// camera
-//if (shake_duration > 0) {
-    //var shake_x = random_range(-shake_intensity, shake_intensity);
-   // var shake_y = random_range(-shake_intensity, shake_intensity);
-    //camera_set_view_pos(view_camera[0], view_xview[0] + shake_x, view_yview[0] + shake_y);
-    //shake_duration -= 1;
-//} else {
-    // 确保视图返回原位
-    //camera_set_view_pos(view_camera[0], view_xview[0], view_yview[0]);
-//}
-
-
 if (currentHealth <= 0) {
 		state = PlayerState.Dead;
 	    sprite_index = player_death2; 
@@ -157,8 +130,11 @@ if (keyboard_check_pressed(vk_enter)) {
 if (keyboard_check_pressed(vk_tab)) {
     room_goto(Room2); 
 }
-
-
+if (state == PlayerState.Dead && musicplay){
+	audio_stop_sound(bgm);
+    audio_play_sound(stop_and, 1, true);
+	musicplay = false;
+}
 
 
 

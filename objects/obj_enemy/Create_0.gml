@@ -44,6 +44,7 @@ function takeDamage() {
 
 		}
 		instance_create_layer(x,y,"Enemy",obj_enemyd)
+		audio_play_sound(enemydying,1,false);
 		instance_destroy()
 		instance_destroy(gun)
 	}

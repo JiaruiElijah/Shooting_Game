@@ -1,5 +1,8 @@
+var shadowOffsetY = 10; // 根据需要调整影子的垂直偏移
+draw_sprite(spr_shadow, 0, x, y + shadowOffsetY);
+draw_self(); // 绘制物体本身
 
-draw_self();
+
 var healthBarWidth = 100;
 var healthBarHeight = 10;
 var xStart = x - healthBarWidth / 2;
@@ -11,8 +14,8 @@ if (state == PlayerState.Dead) {
 
     var message = "Press space to rebirth!";
 
-    
     draw_set_color(c_white);
     draw_set_font(dia); 
     draw_text(obj_player2.x, obj_player2.y + 50, message);
 }
+

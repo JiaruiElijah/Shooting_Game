@@ -83,3 +83,8 @@ if(!allow_shoot) {
 		shoot_timer = 0;
 	}
 }
+
+if(obj_player2.state == PlayerState.Dead){
+	allow_shoot = false;
+
+}

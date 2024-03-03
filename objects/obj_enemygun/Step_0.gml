@@ -7,7 +7,7 @@ image_angle = _angle
 
 
 
-if(allow_shoot == true) && instance_exists(obj_player2){
+if(allow_shoot == true) && instance_exists(obj_player2) && obj_player2.state == PlayerState.Alive{
 	_angle = point_direction(x,y,obj_player2.x,obj_player2.y)
 	var effect_x = x + lengthdir_x(30, _angle);
 	var effect_y = y + lengthdir_y(30, _angle);

@@ -33,7 +33,7 @@ knockback_direction = 0;
 maxHealth = 100; // 玩家的最大血量
 currentHealth = maxHealth; // 玩家当前血量
 
-
+musicplay = true;
 /// @func apply_damage(instance, damageAmount)
 /// @desc Apply damage to the given instance and check for death
 /// @arg instance The instance to apply damage to
