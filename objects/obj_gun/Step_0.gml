@@ -63,11 +63,11 @@ if mouse_check_button(mb_left) && allow_shoot {
 	}	
 
 	var effect_instance = instance_create_layer(global.player_x + lengthdir_x(40, image_angle), global.player_y + lengthdir_y(40, image_angle), "Effects", obj_effect);//子弹爆炸
-	//var decal = instance_create_depth(x, y, depth, oPlayerBulletDecal) // 抛弹子弹壳
-	//with decal {
-		//direction = random(360)
-		//knockback_speed = 10
-	//}
+	var decal = instance_create_depth(x, y, depth, obj_decal) // 抛弹子弹壳
+	with decal {
+		direction = random(360)
+		knockback_speed = 10
+	}
 	effect_instance.direction = image_angle;
 	effect_instance.image_angle = image_angle;
 	

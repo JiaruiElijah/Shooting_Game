@@ -13,11 +13,11 @@ if(allow_shoot == true) && instance_exists(obj_player2) && obj_player2.state == 
 	var effect_y = y + lengthdir_y(30, _angle);
 	var _enemy_bullet = instance_create_layer(effect_x, effect_y, "Instances_2", obj_bullet2);
 	var effect_instance = instance_create_layer(effect_x, effect_y, "Effects", obj_effect);
-	//var decal = instance_create_depth(x, y, depth, oEnemyBulletDecal)
-	//with decal {
-	//	direction = random(360)
-	//	knockback_speed = 10
-	//}
+	var decal = instance_create_depth(x, y, depth, obj_enemydecal)
+	with decal {
+		direction = random(360)
+		knockback_speed = 10
+	}
 	effect_instance.direction = _angle;
 	effect_instance.image_angle = _angle;
 	audio_play_sound(shooting_player,1,false)
