@@ -13,8 +13,6 @@ else{
 	move_speed = 0;
 }
 
-
-
 hspeed = 0;
 vspeed = 0;
 
@@ -46,12 +44,23 @@ if (hspeed != 0 && vspeed != 0) {
 if (hspeed == 0 && vspeed == 0) {
     sprite_index = Stand;
 }
-
+if (isDashing) {
+	if(mouse_x > x){
+		sprite_index = dash; 
+	}
+	else{
+		sprite_index = dash;
+		image_xscale =-0.3;
+		
+	}
+    
+	
+}
 
 x += hspeed;
 y += vspeed;
 
-if place_meeting(x,y,obj_bullet2) {
+if place_meeting(x,y,obj_bullet2 and !isDashing) {
 	gothit = true
 	//hit_point-=1
 	var _effect = instance_create_layer(x, y, "Effects", obj_effect2);
@@ -67,9 +76,6 @@ if place_meeting(x,y,obj_bullet2) {
 		}
 	instance_destroy(onbullet2)
 	alarm[1] = 20
-	// 假设这段代码在玩家被击中时执行
-
-	// 玩家被击中的逻辑
 	with (oCameraFX) {
 	    stutter_duration = 15; // 假设卡顿持续5步
 	}
@@ -91,7 +97,7 @@ if (knockback_speed > 0) {
     }
 }
 
-if (global.endTime == 0) { // 如果计时器未停止
+if (global.endTime == 0) { 
     global.elapsedTime = current_time - global.startTime;
 }
 
@@ -137,4 +143,30 @@ if (state == PlayerState.Dead && musicplay){
 }
 
 
+if (dash_cooldown_timer > 0) {
+    dash_cooldown_timer--;
+}
+if (mouse_check_button_pressed(mb_right) && !isDashing && dash_cooldown_timer <= 0) {
+    isDashing = true;
+    dash_timer = dash_duration;
+	dash_cooldown_timer = dash_cooldown;
+    dash_direction = point_direction(x, y, mouse_x, mouse_y); // 或使用玩家的移动方向
+}
 
+
+if (isDashing) {
+    x += lengthdir_x(dash_speed, dash_direction);
+    y += lengthdir_y(dash_speed, dash_direction);
+    dash_timer--;
+    
+    if (dash_timer <= 0) {
+        isDashing = false;
+    }
+}
+
+
+if (isDashing && place_meeting(x + lengthdir_x(dash_speed, dash_direction), y + lengthdir_y(dash_speed, dash_direction), obj_tree)) {
+
+    isDashing = false;
+    dash_timer = 0;
+}

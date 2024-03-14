@@ -4,7 +4,6 @@ enum PlayerState {
 }
 
 
-// 在Create事件中初始化状态为Alive
 state = PlayerState.Alive;
 
 
@@ -38,4 +37,11 @@ musicplay = true;
 /// @desc Apply damage to the given instance and check for death
 /// @arg instance The instance to apply damage to
 /// @arg damageAmount The amount of damage to apply
+
+dash_speed = 10; // 冲刺速度
+dash_duration = 15; // 冲刺持续的步数
+isDashing = false; // 是否正在冲刺
+dash_timer = 0; // 冲刺计时器
+dash_cooldown = 60; // 冲刺冷却时间，以步为单位，这里设为1秒（假设游戏运行在60FPS）
+dash_cooldown_timer = 0; // 冲刺冷却计时器
 
