@@ -13,6 +13,7 @@ if(!other.dead && state == PlayerState.Alive){
 
 }
 
+
 var knockback_strength = 85;
 var direction2 = point_direction(obj_enemy.x, obj_enemy.y, obj_player2.x, obj_player2.y);
 var knockback_x = lengthdir_x(knockback_strength, direction2);

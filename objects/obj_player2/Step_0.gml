@@ -60,12 +60,12 @@ if (isDashing) {
 x += hspeed;
 y += vspeed;
 
-if place_meeting(x,y,obj_bullet2 and !isDashing) {
+if place_meeting(x,y,obj_bullet2) {
 	gothit = true
 	//hit_point-=1
 	var _effect = instance_create_layer(x, y, "Effects", obj_effect2);
 	apply_damage(obj_player2, 20);
-	//show_debug_message(hit_point)
+	show_debug_message("gothit")
 	sprite_index = gothitPlayer;
 	var onbullet2 = instance_place(x, y, obj_bullet2);
 	if (onbullet2 != noone) {
